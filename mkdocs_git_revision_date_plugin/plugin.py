@@ -3,14 +3,13 @@ from datetime import datetime
 
 from mkdocs.config import config_options
 from mkdocs.plugins import BasePlugin
-from mkdocs.utils import string_types
 from jinja2 import Template
 from .util import Util
 
 
 class GitRevisionDatePlugin(BasePlugin):
     config_scheme = (
-        ('enabled_if_env', config_options.Type(string_types)),
+        ('enabled_if_env', config_options.Type(str)),
         ('modify_md', config_options.Type(bool, default=True)),
         ('as_datetime', config_options.Type(bool, default=False)),
     )
