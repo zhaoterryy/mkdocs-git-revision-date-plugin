@@ -1,6 +1,6 @@
 # mkdocs-git-revision-date-plugin
 
-MkDocs plugin for setting revision date from git per markdown file.
+MkDocs plugin that displays the last revision date of the current page of the documentation based on Git. The revision date will be displayed in ISO format *(YYYY-mm-dd)*. If you need other date formats check out [timvink's fork][mkdocs-git-revision-date-localized-plugin]
 
 ## Setup
 Install the plugin using pip:
@@ -19,7 +19,6 @@ plugins:
 More information about plugins in the [MkDocs documentation][mkdocs-plugins].
 
 ## Usage
-The revision date will be displayed in ISO format *(YYYY-mm-dd)*.
 
 ### Templates - `page.meta.revision_date`:
 #### Example
@@ -60,6 +59,7 @@ plugins:
 [mkdocs-template]: https://www.mkdocs.org/user-guide/custom-themes/#template-variables
 [mkdocs-block]: https://www.mkdocs.org/user-guide/styling-your-docs/#overriding-template-blocks
 [mkdocs-macro]: https://github.com/fralau/mkdocs_macros_plugin
+[mkdocs-git-revision-date-localized-plugin]: https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
 
 ## Options
 
