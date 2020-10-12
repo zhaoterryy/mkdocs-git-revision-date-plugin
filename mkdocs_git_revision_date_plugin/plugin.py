@@ -4,7 +4,6 @@ from datetime import datetime
 
 from mkdocs.config import config_options
 from mkdocs.plugins import BasePlugin
-from mkdocs.utils import string_types
 from .util import Util
 
 
