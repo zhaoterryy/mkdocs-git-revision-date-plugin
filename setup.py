@@ -9,6 +9,7 @@ setup(
     author='Terry Zhao',
     author_email='zhao.terryy@gmail.com',
     license='MIT',
+    license_files = ('LICENSE'),
     python_requires='>=3.4',
     install_requires=[
         'mkdocs>=0.17',
