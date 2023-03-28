@@ -12,13 +12,15 @@ class GitRevisionDatePlugin(BasePlugin):
         ('enabled_if_env', config_options.Type(str)),
         ('modify_md', config_options.Type(bool, default=True)),
         ('as_datetime', config_options.Type(bool, default=False)),
+        ('repo_dir', config_options.Type(str, default='.')),
     )
 
     def __init__(self):
         self.enabled = True
-        self.util = Util()
 
     def on_config(self, config):
+        self.util = Util(self.config['repo_dir'])
+
         env_name = self.config['enabled_if_env']
         if env_name:
             self.enabled = environ.get(env_name) == '1'
@@ -63,5 +65,5 @@ class GitRevisionDatePlugin(BasePlugin):
                           revision_date,
                           markdown,
                           flags=re.IGNORECASE)
-            
+
             return markdown
